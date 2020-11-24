@@ -15,14 +15,17 @@ import { AntraToolbarModule } from './antra-toolbar/antra-toolbar.module';
 import { AntraTreeModule } from './antra-tree/antra-tree.module';
 import { SidenavbarComponent } from './components/antra-sidenavbar/antra-sidenavbar.component';
 
+// directives
+import { AntraWidgetDirective } from './directives/antra-widget/antra-widget.directive';
+
 // components
 import { ButtonComponent } from './components/button/button.component';
 import { RaisedButtonComponent } from './components/raised-button/raised-button.component';
 import { ProgressSpinnerComponent } from './components/progress-spinner/progress-spinner.component';
 import { LogoComponent } from './components/logo/logo.component';
+import { StatusCircleComponent } from './components/status-circle/status-circle.component';
 
-// directives
-import { AntraWidgetDirective } from './directives/antra-widget/antra-widget.directive';
+
 // import { NavLinkNode, NavLinkNodeFlat } from './interfaces/sidenavbar.interface';
 
 @NgModule({
@@ -35,6 +38,7 @@ import { AntraWidgetDirective } from './directives/antra-widget/antra-widget.dir
     LogoComponent,
     ProgressSpinnerComponent,
     AntraWidgetDirective,
+    StatusCircleComponent,
   ],
 
   imports: [
@@ -69,6 +73,7 @@ import { AntraWidgetDirective } from './directives/antra-widget/antra-widget.dir
     RaisedButtonComponent,
     ProgressSpinnerComponent,
     LogoComponent,
+    StatusCircleComponent,
   ],
 })
 export class AntraUiModule {}

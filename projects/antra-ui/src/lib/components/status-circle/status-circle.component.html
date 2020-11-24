@@ -1,0 +1,13 @@
+<svg>
+  <circle
+    [ngClass]="{
+      'status-circle-0percent': percentage === 0,
+      'status-circle-1to50percent': percentage >= 1 && percentage <= 50,
+      'status-circle-51to80percent': percentage >= 51 && percentage <= 80,
+      'status-circle-81to100percent': percentage >= 81 && percentage <= 100
+    }"
+    cx="70"
+    cy="70"
+    [style.r]="radius"
+  ></circle>
+</svg>

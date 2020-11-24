@@ -18,6 +18,10 @@ import { WidgetExampleComponent } from './components/pages/widget-page/widget-ex
 import { WidgetPageComponent } from './components/pages/widget-page/widget-page.component';
 import { LogoPageComponent } from './components/pages/logo-page/logo-page.component';
 import { LogoExampleComponent } from './components/pages/logo-page/logo-example/logo-example.component';
+import { StatusCirclePageComponent } from './components/pages/status-circle-page/status-circle-page.component';
+import { StatusCircleExampleComponent } from './components/pages/status-circle-page/status-circle-example/status-circle-example.component';
+
+
 
 @NgModule({
   declarations: [
@@ -35,6 +39,9 @@ import { LogoExampleComponent } from './components/pages/logo-page/logo-example/
     WidgetExampleComponent,
     LogoPageComponent,
     LogoExampleComponent,
+    StatusCirclePageComponent,
+    StatusCircleExampleComponent,
+
   ],
   imports: [AntraUiModule, AppRoutingModule, HighlightModule],
   providers: [

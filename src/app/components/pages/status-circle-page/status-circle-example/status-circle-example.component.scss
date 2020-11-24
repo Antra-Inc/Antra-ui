@@ -1,0 +1,72 @@
+.example-content {
+  padding: 10px 0;
+
+  & > * {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.status-circle-container-1 {
+  position: relative;
+  width: 1200px;
+  height: 128px;
+  background: #0b82c2;
+  z-index: 1000;
+}
+
+.status-circle-container-2 {
+  position: relative;
+  width: 1200px;
+  height: 128px;
+  background: #11c20b;
+  z-index: 1000;
+}
+
+.status-circle-container-3 {
+  position: relative;
+  width: 1200px;
+  height: 128px;
+  background: #c2540b;
+  z-index: 1000;
+}
+
+.customized-1::ng-deep .status-circle-0percent {
+  fill: black;
+}
+
+.customized-1::ng-deep .status-circle-1to50percent {
+  fill: rgb(128, 0, 60);
+}
+
+.customized-1::ng-deep .status-circle-51to80percent {
+  fill: blue;
+}
+
+.customized-1::ng-deep .status-circle-81to100percent {
+  fill: yellow;
+}
+
+.customized-2::ng-deep .status-circle-0percent {
+  fill: rgb(99, 9, 243);
+  stroke: rgb(252, 217, 217);
+  stroke-width: 2;
+}
+
+.customized-2::ng-deep .status-circle-1to50percent {
+  fill: rgb(173, 114, 141);
+  stroke: red;
+  stroke-width: 2;
+}
+
+.customized-2::ng-deep .status-circle-51to80percent {
+  fill: rgb(9, 221, 9);
+  stroke: #ffff00;
+  stroke-width: 2;
+}
+
+.customized-2::ng-deep .status-circle-81to100percent {
+  fill: rgb(255, 0, 119);
+  stroke: #11c20b;
+  stroke-width: 2;
+}

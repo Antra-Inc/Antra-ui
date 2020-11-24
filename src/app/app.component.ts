@@ -38,6 +38,11 @@ export class AppComponent {
       icon: 'donut_large',
       children: [{ name: 'ProgressSpinnerComponent', url: 'components/progress-spinner' }],
     },
+  {
+      name: 'Status Circle',
+      icon: 'check_circle_outline',
+      children: [{ name: 'StatusCircleComponent', url: 'components/status-circle' }],
+    },
   ];
 
   constructor(private router: Router) {}

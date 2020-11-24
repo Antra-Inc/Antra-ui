@@ -1,0 +1,21 @@
+circle {
+  width: 100%;
+  height: 100%;
+  stroke-linecap: round;
+}
+
+.status-circle-0percent {
+  fill: white;
+}
+
+.status-circle-1to50percent {
+  fill: red;
+}
+
+.status-circle-51to80percent {
+  fill: #ffff00;
+}
+
+.status-circle-81to100percent {
+  fill: rgb(9, 221, 9);
+}
