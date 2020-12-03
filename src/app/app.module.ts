@@ -18,6 +18,8 @@ import { WidgetExampleComponent } from './components/pages/widget-page/widget-ex
 import { WidgetPageComponent } from './components/pages/widget-page/widget-page.component';
 import { LogoPageComponent } from './components/pages/logo-page/logo-page.component';
 import { LogoExampleComponent } from './components/pages/logo-page/logo-example/logo-example.component';
+import { GlobalSearchPageComponent } from './components/pages/global-search-page/global-search-page.component';
+import { GlobalSearchExampleComponent } from './components/pages/global-search-page/global-search-example/global-search-example.component';
 
 import { loadSvgResources } from './utils/svg.util';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -40,6 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
     WidgetExampleComponent,
     LogoPageComponent,
     LogoExampleComponent,
+    GlobalSearchPageComponent,
+    GlobalSearchExampleComponent,
   ],
   imports: [
     AntraUiModule,

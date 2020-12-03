@@ -1,0 +1,17 @@
+.input-properties {
+  border: 1px solid grey;
+  border-radius: 25px;
+  font: inherit;
+  font-size: 18px;
+  height: 38px;
+  padding: 0px 18px;
+  width: 490px;
+
+  @media (max-width: 960px) {
+    width: 100%;
+  }
+}
+
+input:focus {
+  outline: none;
+}
