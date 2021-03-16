@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
 import { FlatTreeControl } from '@angular/cdk/tree';
 import { NavLinkNode, NavLinkNodeFlat } from '../../interfaces/sidenavbar.interface';
@@ -28,7 +28,7 @@ import { NavLinkNode, NavLinkNodeFlat } from '../../interfaces/sidenavbar.interf
  * Example of usage:
  * <example-url>https://antra-inc.github.io/Antra-ui/components/sidenav</example-url>
  */
-export class SidenavbarComponent implements OnInit {
+export class SidenavbarComponent implements OnInit, OnChanges {
   /**
    * Value of control Sidenav stretch, when isExpanded = true, the Sidenav should be expended;
    */
@@ -107,12 +107,16 @@ export class SidenavbarComponent implements OnInit {
    * @ignore
    */
   constructor() { }
+  ngOnChanges(changes: SimpleChanges): void {
+    this.dataSource.data = this.sideNavConfig;
+  }
   /**
    * @ignore
    */
   ngOnInit(): void {
     this.dataSource.data = this.sideNavConfig;
   }
+
   /**
    * @ignore
    */
