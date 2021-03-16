@@ -1,0 +1,1101 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>antra-lib documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">antra-lib documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>SidenavbarComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+        <li >
+            <a href="#example" role="tab" id="example-tab" data-toggle="tab" data-link="example">Examples</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/antra-ui/src/lib/components/antra-sidenavbar/antra-sidenavbar.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p><code>antra-sidenavbar</code> is a mat-drawer-container with a vertical navigation component which apart from traditional,
+text links, might embed icons.</p>
+<p>By virtue of its clarity and simplicity, it remarkably increases the User Experience.
+It allows you to navigate through small applications as well as vast portals swiftly.
+Its multiple link embedding functionalities enables you to implement more advanced content categorization,
+which is almost essential within bigger projects.</p>
+<p>Thanks to Antra-UI you can easily implement SideNav in your own projects, by using one of various, alluring Side Menus.</p>
+<h3 id="usage">Usage</h3>
+<p>  <code>import { AntraUiModule } from &#39;antra-ui&#39;;</code></p>
+<p>  <code>import { NavLinkNode, NavLinkNodeFlat } from &#39;antra-ui&#39;;</code></p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>antra-sidenavbar</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./antra-sidenavbar.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./antra-sidenavbar.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#isExpanded">isExpanded</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#handleListOnClick">handleListOnClick</a>
+                            </li>
+                            <li>
+                                <a href="#handleMouseEnter">handleMouseEnter</a>
+                            </li>
+                            <li>
+                                <a href="#handleMouseLeave">handleMouseLeave</a>
+                            </li>
+                            <li>
+                                <a href="#handleTreeNodeToggle">handleTreeNodeToggle</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnChanges">ngOnChanges</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#isOpen">isOpen</a>
+                            </li>
+                            <li>
+                                <a href="#sideNavBackground">sideNavBackground</a>
+                            </li>
+                            <li>
+                                <a href="#sideNavConfig">sideNavConfig</a>
+                            </li>
+                            <li>
+                                <a href="#sidenavMode">sidenavMode</a>
+                            </li>
+                            <li>
+                                <a href="#sideNavTextColor">sideNavTextColor</a>
+                            </li>
+                            <li>
+                                <a href="#treeNodePaddingIndent">treeNodePaddingIndent</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#listOptionClicked">listOptionClicked</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isOpen"></a>
+                        <b>isOpen</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">projects/antra-ui/src/lib/components/antra-sidenavbar/antra-sidenavbar.component.ts:56</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Set the Sidenav open or close;</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sideNavBackground"></a>
+                        <b>sideNavBackground</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">projects/antra-ui/src/lib/components/antra-sidenavbar/antra-sidenavbar.component.ts:44</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Customrize the Sidenav background;</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sideNavConfig"></a>
+                        <b>sideNavConfig</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/NavLinkNode.html" target="_self" >NavLinkNode[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">projects/antra-ui/src/lib/components/antra-sidenavbar/antra-sidenavbar.component.ts:61</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Customrize tree nodes, enables to implement more advanced content categorization;</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sidenavMode"></a>
+                        <b>sidenavMode</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>&quot;over&quot; | &quot;push&quot; | &quot;side&quot;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;side&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">projects/antra-ui/src/lib/components/antra-sidenavbar/antra-sidenavbar.component.ts:48</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Set mode of the Sidenav, the default mode is side;</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sideNavTextColor"></a>
+                        <b>sideNavTextColor</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;red&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">projects/antra-ui/src/lib/components/antra-sidenavbar/antra-sidenavbar.component.ts:40</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Customrize the Sidenav text color;</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="treeNodePaddingIndent"></a>
+                        <b>treeNodePaddingIndent</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;0px&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">projects/antra-ui/src/lib/components/antra-sidenavbar/antra-sidenavbar.component.ts:52</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Set the tree node left padding;</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listOptionClicked"></a>
+                        <b>listOptionClicked</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">projects/antra-ui/src/lib/components/antra-sidenavbar/antra-sidenavbar.component.ts:66</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Event emiter, use to hold node info;</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleListOnClick"></a>
+                    <span class="name">
+                        <b>
+                            handleListOnClick
+                        </b>
+                        <a href="#handleListOnClick"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleListOnClick(node: <a href="../interfaces/NavLinkNodeFlat.html">NavLinkNodeFlat</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="130"
+                            class="link-to-prism">projects/antra-ui/src/lib/components/antra-sidenavbar/antra-sidenavbar.component.ts:130</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Emit event during click the tree node</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>node</td>
+                                    <td>
+                                                <code><a href="../interfaces/NavLinkNodeFlat.html" target="_self" >NavLinkNodeFlat</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleMouseEnter"></a>
+                    <span class="name">
+                        <b>
+                            handleMouseEnter
+                        </b>
+                        <a href="#handleMouseEnter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleMouseEnter()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="142"
+                            class="link-to-prism">projects/antra-ui/src/lib/components/antra-sidenavbar/antra-sidenavbar.component.ts:142</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handle mouse enter</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleMouseLeave"></a>
+                    <span class="name">
+                        <b>
+                            handleMouseLeave
+                        </b>
+                        <a href="#handleMouseLeave"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleMouseLeave()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="136"
+                            class="link-to-prism">projects/antra-ui/src/lib/components/antra-sidenavbar/antra-sidenavbar.component.ts:136</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handle mouse leave</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleTreeNodeToggle"></a>
+                    <span class="name">
+                        <b>
+                            handleTreeNodeToggle
+                        </b>
+                        <a href="#handleTreeNodeToggle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleTreeNodeToggle(node: <a href="../interfaces/NavLinkNodeFlat.html">NavLinkNodeFlat</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="149"
+                            class="link-to-prism">projects/antra-ui/src/lib/components/antra-sidenavbar/antra-sidenavbar.component.ts:149</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Toggle the tree node which has child tree nodes</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>node</td>
+                                    <td>
+                                                <code><a href="../interfaces/NavLinkNodeFlat.html" target="_self" >NavLinkNodeFlat</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnChanges"></a>
+                    <span class="name">
+                        <b>
+                            ngOnChanges
+                        </b>
+                        <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnChanges(changes: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="110"
+                            class="link-to-prism">projects/antra-ui/src/lib/components/antra-sidenavbar/antra-sidenavbar.component.ts:110</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>changes</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/core/SimpleChanges" target="_blank" >SimpleChanges</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isExpanded"></a>
+                        <span class="name">
+                            <b>
+                            isExpanded</b>
+                            <a href="#isExpanded"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">projects/antra-ui/src/lib/components/antra-sidenavbar/antra-sidenavbar.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Value of control Sidenav stretch, when isExpanded = true, the Sidenav should be expended;</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, EventEmitter, Input, Output, OnInit, OnChanges, SimpleChanges } from &#x27;@angular/core&#x27;;
+import { MatTreeFlatDataSource, MatTreeFlattener } from &#x27;@angular/material/tree&#x27;;
+import { FlatTreeControl } from &#x27;@angular/cdk/tree&#x27;;
+import { NavLinkNode, NavLinkNodeFlat } from &#x27;../../interfaces/sidenavbar.interface&#x27;;
+
+/**
+ * &#x60;antra-sidenavbar&#x60; is a mat-drawer-container with a vertical navigation component which apart from traditional,
+ * text links, might embed icons.
+ *
+ * By virtue of its clarity and simplicity, it remarkably increases the User Experience.
+ * It allows you to navigate through small applications as well as vast portals swiftly.
+ * Its multiple link embedding functionalities enables you to implement more advanced content categorization,
+ * which is almost essential within bigger projects.
+ *
+ * Thanks to Antra-UI you can easily implement SideNav in your own projects, by using one of various, alluring Side Menus.
+ *
+ * ### Usage
+ *  &#x60;import { AntraUiModule } from &#x27;antra-ui&#x27;;&#x60;
+ *
+ *  &#x60;import { NavLinkNode, NavLinkNodeFlat } from &#x27;antra-ui&#x27;;&#x60;
+ */
+@Component({
+  selector: &#x27;antra-sidenavbar&#x27;,
+  templateUrl: &#x27;./antra-sidenavbar.component.html&#x27;,
+  styleUrls: [&#x27;./antra-sidenavbar.component.scss&#x27;],
+})
+/**
+ * Example of usage:
+ * &lt;example-url&gt;https://antra-inc.github.io/Antra-ui/components/sidenav&lt;/example-url&gt;
+ */
+export class SidenavbarComponent implements OnInit, OnChanges {
+  /**
+   * Value of control Sidenav stretch, when isExpanded &#x3D; true, the Sidenav should be expended;
+   */
+  isExpanded &#x3D; false;
+
+  /**
+   * Customrize the Sidenav text color;
+   */
+  @Input() sideNavTextColor &#x3D; &#x27;red&#x27;;
+  /**
+   * Customrize the Sidenav background;
+   */
+  @Input() sideNavBackground &#x3D; &#x27;&#x27;;
+  /**
+   * Set mode of the Sidenav, the default mode is side;
+   */
+  @Input() sidenavMode: &#x27;over&#x27; | &#x27;push&#x27; | &#x27;side&#x27; &#x3D; &#x27;side&#x27;;
+  /**
+   * Set the tree node left padding;
+   */
+  @Input() treeNodePaddingIndent &#x3D; &#x27;0px&#x27;;
+  /**
+   * Set the Sidenav open or close;
+   */
+  @Input() isOpen &#x3D; true;
+
+  /**
+   * Customrize tree nodes, enables to implement more advanced content categorization;
+   */
+  @Input() sideNavConfig: NavLinkNode[] &#x3D; [];
+
+  /**
+   * Event emiter, use to hold node info;
+   */
+  @Output() listOptionClicked &#x3D; new EventEmitter();
+
+  /**
+   * @ignore
+   */
+  // tslint:disable-next-line: variable-name
+  private _transformer &#x3D; (node: NavLinkNode, level: number) &#x3D;&gt; {
+    return {
+      expandable: !!node.children &amp;&amp; node.children.length &gt; 0,
+      name: node.name,
+      url: node.url,
+      icon: node.icon,
+      useSvgIcon: node.useSvgIcon,
+      level,
+    };
+  };
+
+  /**
+   * @ignore
+   */
+  // tslint:disable-next-line: member-ordering
+  treeControl &#x3D; new FlatTreeControl&lt;NavLinkNodeFlat&gt;(
+    (node) &#x3D;&gt; node.level,
+    (node) &#x3D;&gt; node.expandable
+  );
+  /**
+   * @ignore
+   */
+  // tslint:disable-next-line: member-ordering
+  treeFlattener &#x3D; new MatTreeFlattener(
+    this._transformer,
+    (node) &#x3D;&gt; node.level,
+    (node) &#x3D;&gt; node.expandable,
+    (node) &#x3D;&gt; node.children
+  );
+  /**
+   * @ignore
+   */
+  // tslint:disable-next-line: member-ordering
+  dataSource &#x3D; new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
+  /**
+   * @ignore
+   */
+  constructor() { }
+  ngOnChanges(changes: SimpleChanges): void {
+    this.dataSource.data &#x3D; this.sideNavConfig;
+  }
+  /**
+   * @ignore
+   */
+  ngOnInit(): void {
+    this.dataSource.data &#x3D; this.sideNavConfig;
+  }
+
+  /**
+   * @ignore
+   */
+  hasChild &#x3D; (_: number, node: NavLinkNodeFlat) &#x3D;&gt; node.expandable;
+
+  /**
+   * Emit event during click the tree node
+   * @param NavLinkNodeFlat node &#x60;node&#x60; contains customriz info for each tree node
+   */
+  // tslint:disable-next-line: typedef
+  handleListOnClick(node: NavLinkNodeFlat) {
+    this.listOptionClicked.emit(node);
+  }
+  /**
+   * Handle mouse leave
+   */
+  handleMouseLeave(): void {
+    this.isExpanded &#x3D; false;
+  }
+  /**
+   * Handle mouse enter
+   */
+  handleMouseEnter(): void {
+    this.isExpanded &#x3D; true;
+  }
+  /**
+   * Toggle the tree node which has child tree nodes
+   * @param NavLinkNodeFlat node
+   */
+  handleTreeNodeToggle(node: NavLinkNodeFlat): void {
+    this.treeControl.toggle(node);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;mat-drawer-container autosize&gt;
+  &lt;mat-drawer #drawer [mode]&#x3D;&quot;sidenavMode&quot; [opened]&#x3D;&quot;isOpen&quot; class&#x3D;&quot;sidenavbar-sidenav&quot;
+    [ngStyle]&#x3D;&quot;{ background: sideNavBackground }&quot; [ngClass]&#x3D;&quot;{ sidenavopen: isExpanded }&quot;
+    (mouseenter)&#x3D;&quot;handleMouseEnter()&quot; (mouseleave)&#x3D;&quot;handleMouseLeave()&quot; color&#x3D;&quot;primary&quot;&gt;
+    &lt;mat-nav-list&gt;
+      &lt;mat-tree [dataSource]&#x3D;&quot;dataSource&quot; [treeControl]&#x3D;&quot;treeControl&quot; [ngStyle]&#x3D;&quot;{ background: sideNavBackground }&quot;&gt;
+        &lt;mat-tree-node [ngStyle]&#x3D;&quot;{ display: isExpanded || !node.children? &#x27;block&#x27; : &#x27;none&#x27; }&quot;
+          *matTreeNodeDef&#x3D;&quot;let node&quot; matTreeNodePadding [matTreeNodePaddingIndent]&#x3D;&quot;treeNodePaddingIndent&quot;&gt;
+          &lt;mat-list-item (click)&#x3D;&quot;handleListOnClick(node)&quot; [ngStyle]&#x3D;&quot;{ color: sideNavTextColor }&quot;&gt;
+            &lt;mat-icon mat-list-icon *ngIf&#x3D;&quot;!node.useSvgIcon&quot;&gt;{{ node.icon }}&lt;/mat-icon&gt;
+            &lt;mat-icon mat-list-icon *ngIf&#x3D;&quot;node.useSvgIcon&quot; [svgIcon]&#x3D;&quot;node.icon&quot;&gt;&lt;/mat-icon&gt;
+            &lt;span mat-line&gt;{{ node.name }}&lt;/span&gt;
+          &lt;/mat-list-item&gt;
+        &lt;/mat-tree-node&gt;
+
+        &lt;mat-tree-node *matTreeNodeDef&#x3D;&quot;let node; when: hasChild&quot;&gt;
+          &lt;mat-list-item (click)&#x3D;&quot;handleTreeNodeToggle(node); handleListOnClick(node)&quot;
+            [attr.aria-label]&#x3D;&quot;&#x27;Toggle &#x27; + node.name&quot; [ngStyle]&#x3D;&quot;{ color: sideNavTextColor }&quot;&gt;
+            &lt;mat-icon mat-list-icon *ngIf&#x3D;&quot;!node.useSvgIcon&quot;&gt;{{ node.icon }}&lt;/mat-icon&gt;
+            &lt;mat-icon mat-list-icon *ngIf&#x3D;&quot;node.useSvgIcon&quot; [svgIcon]&#x3D;&quot;node.icon&quot;&gt;&lt;/mat-icon&gt;
+            &lt;mat-icon *ngIf&#x3D;&quot;isExpanded&quot;&gt;
+              {{ treeControl.isExpanded(node)&#x3D;&#x3D;&#x3D;null?&#x27;&#x27;:treeControl.isExpanded(node) ? &#x27;expand_more&#x27; : &#x27;chevron_right&#x27;
+              }}
+            &lt;/mat-icon&gt;
+            &lt;span mat-line *ngIf&#x3D;&quot;isExpanded&quot;&gt;{{ node.name }}&lt;/span&gt;
+          &lt;/mat-list-item&gt;
+        &lt;/mat-tree-node&gt;
+      &lt;/mat-tree&gt;
+    &lt;/mat-nav-list&gt;
+  &lt;/mat-drawer&gt;
+
+  &lt;mat-drawer-content autosize&gt;
+    &lt;ng-content&gt;&lt;/ng-content&gt;
+  &lt;/mat-drawer-content&gt;
+&lt;/mat-drawer-container&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./antra-sidenavbar.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.sidenavbar-sidenav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  transition: 0.2s ease;
+}
+
+.sidenavopen {
+  width: 300px;
+  transition: 0.2s ease;
+}
+
+mat-drawer-content {
+  margin-left: 65px !important;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-pane fade " id="c-example">
+            <iframe class="exampleContainer" src="https://antra-inc.github.io/Antra-ui/components/sidenav">
+                <p>no-iframes</p>
+            </iframe>
+    </div>
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><mat-drawer-container autosize>  <mat-drawer #drawer [mode]="sidenavMode" [opened]="isOpen" class="sidenavbar-sidenav"    [ngStyle]="{ background: sideNavBackground }" [ngClass]="{ sidenavopen: isExpanded }"    (mouseenter)="handleMouseEnter()" (mouseleave)="handleMouseLeave()" color="primary">    <mat-nav-list>      <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" [ngStyle]="{ background: sideNavBackground }">        <mat-tree-node [ngStyle]="{ display: isExpanded || !node.children? \'block\' : \'none\' }"          *matTreeNodeDef="let node" matTreeNodePadding [matTreeNodePaddingIndent]="treeNodePaddingIndent">          <mat-list-item (click)="handleListOnClick(node)" [ngStyle]="{ color: sideNavTextColor }">            <mat-icon mat-list-icon *ngIf="!node.useSvgIcon">{{ node.icon }}</mat-icon>            <mat-icon mat-list-icon *ngIf="node.useSvgIcon" [svgIcon]="node.icon"></mat-icon>            <span mat-line>{{ node.name }}</span>          </mat-list-item>        </mat-tree-node>        <mat-tree-node *matTreeNodeDef="let node; when: hasChild">          <mat-list-item (click)="handleTreeNodeToggle(node); handleListOnClick(node)"            [attr.aria-label]="\'Toggle \' + node.name" [ngStyle]="{ color: sideNavTextColor }">            <mat-icon mat-list-icon *ngIf="!node.useSvgIcon">{{ node.icon }}</mat-icon>            <mat-icon mat-list-icon *ngIf="node.useSvgIcon" [svgIcon]="node.icon"></mat-icon>            <mat-icon *ngIf="isExpanded">              {{ treeControl.isExpanded(node)===null?\'\':treeControl.isExpanded(node) ? \'expand_more\' : \'chevron_right\'              }}            </mat-icon>            <span mat-line *ngIf="isExpanded">{{ node.name }}</span>          </mat-list-item>        </mat-tree-node>      </mat-tree>    </mat-nav-list>  </mat-drawer>  <mat-drawer-content autosize>    <ng-content></ng-content>  </mat-drawer-content></mat-drawer-container></div>'
+    var COMPONENTS = [{'name': 'ButtonComponent', 'selector': 'antra-button'},{'name': 'ChangePasswordComponent', 'selector': 'antra-change-password'},{'name': 'LoginComponent', 'selector': 'antra-login'},{'name': 'LogoComponent', 'selector': 'antra-logo'},{'name': 'NotificationDialogComponent', 'selector': 'antra-notification-dialog'},{'name': 'PasswordResetComponent', 'selector': 'antra-password-reset'},{'name': 'ProgressSpinnerComponent', 'selector': 'antra-progress-spinner'},{'name': 'RaisedButtonComponent', 'selector': 'antra-raised-button'},{'name': 'SidenavbarComponent', 'selector': 'antra-sidenavbar'}];
+    var DIRECTIVES = [{'name': 'AntraWidgetDirective', 'selector': '[antraWidget]'},{'name': 'EmailPatternDirective', 'selector': '[antraEmailPattern]'},{'name': 'MatchPasswordDirective', 'selector': '[antraMatchPassword]'},{'name': 'PasswordPatternDirective', 'selector': '[antraPasswordPattern]'}];
+    var ACTUAL_COMPONENT = {'name': 'SidenavbarComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SidenavbarComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

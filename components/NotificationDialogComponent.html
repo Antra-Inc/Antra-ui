@@ -1,0 +1,630 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>antra-lib documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">antra-lib documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>NotificationDialogComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+        <li >
+            <a href="#example" role="tab" id="example-tab" data-toggle="tab" data-link="example">Examples</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/antra-ui/src/lib/components/notification-dialog/notification-dialog.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p><code>antra-notification-dialog</code> component provides a default notification dialog box interface through 
+which you can show Success message or Error message to the end user. This dialog box interface also contains
+the <strong>success-icon, error-icon, message and optional button to redirect to another component</strong>.</p>
+<p>There are several <strong>Input properties</strong> defined for this component. <strong>Input property,  successMessage</strong>, it is used to receive successful
+message from end user after we succeed with any operation. <strong>For instance,</strong> response we get on api call. </p>
+<p><strong>Input property,  errorMessage</strong>, it is used to 
+receive error message from end user incase of any error during any intended operation.</p>
+<p><strong>Input property,  notificationStatus</strong>, it will hold boolean value. On true value, you will get Success Icon with optional
+success message and redirect button. On false value, you will get Error Icon with optional error message and redirect button. 
+Defaults to true.</p>
+<p><strong>Input property,  btnText</strong>, it is used to apply user friendly text to button from the end user.</p>
+<p><strong>NOTE:</strong>  <strong>Input property,  showRedirectButton</strong>, it is set default to <strong>false</strong>,
+meaning button is invisible to user. If you apply <strong>true</strong>, then it will become <strong>visible</strong>.</p>
+<p>There is an <strong>Output event</strong> named sendNotificationEvent, on click
+of <strong>CLICK HERE TO LOGIN</strong> button, it will emit btnText input property value as as string. <strong>For instance,</strong> you have defined a button 
+with value as <strong>CLICK HERE TO LOGIN</strong>, it will emit it&#39;s value as string to the end user on click of this button. </p>
+<h3 id="usage">Usage</h3>
+<p>  <code>import { AntraUiModule } from &#39;antra-ui&#39;;</code></p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>antra-notification-dialog</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./notification-dialog.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./notification-dialog.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#onSubmit">onSubmit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#btnText">btnText</a>
+                            </li>
+                            <li>
+                                <a href="#errorMessage">errorMessage</a>
+                            </li>
+                            <li>
+                                <a href="#notificationStatus">notificationStatus</a>
+                            </li>
+                            <li>
+                                <a href="#showRedirectButton">showRedirectButton</a>
+                            </li>
+                            <li>
+                                <a href="#successMessage">successMessage</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#sendNotificationEvent">sendNotificationEvent</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnText"></a>
+                        <b>btnText</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;CLICK HERE TO LOGIN&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">projects/antra-ui/src/lib/components/notification-dialog/notification-dialog.component.ts:44</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="errorMessage"></a>
+                        <b>errorMessage</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">projects/antra-ui/src/lib/components/notification-dialog/notification-dialog.component.ts:47</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="notificationStatus"></a>
+                        <b>notificationStatus</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">projects/antra-ui/src/lib/components/notification-dialog/notification-dialog.component.ts:46</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showRedirectButton"></a>
+                        <b>showRedirectButton</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">projects/antra-ui/src/lib/components/notification-dialog/notification-dialog.component.ts:45</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="successMessage"></a>
+                        <b>successMessage</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;Password reset successful&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">projects/antra-ui/src/lib/components/notification-dialog/notification-dialog.component.ts:43</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sendNotificationEvent"></a>
+                        <b>sendNotificationEvent</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">projects/antra-ui/src/lib/components/notification-dialog/notification-dialog.component.ts:50</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSubmit"></a>
+                    <span class="name">
+                        <b>
+                            onSubmit
+                        </b>
+                        <a href="#onSubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSubmit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">projects/antra-ui/src/lib/components/notification-dialog/notification-dialog.component.ts:63</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, EventEmitter, Input, OnInit, Output } from &#x27;@angular/core&#x27;;
+
+/**
+ * &#x60;antra-notification-dialog&#x60; component provides a default notification dialog box interface through 
+ * which you can show Success message or Error message to the end user. This dialog box interface also contains
+ * the **success-icon, error-icon, message and optional button to redirect to another component**.
+ *
+ * There are several **Input properties** defined for this component. **Input property,  successMessage**, it is used to receive successful
+ * message from end user after we succeed with any operation. **For instance,** response we get on api call. 
+ * 
+ * **Input property,  errorMessage**, it is used to 
+ * receive error message from end user incase of any error during any intended operation.
+ * 
+ * **Input property,  notificationStatus**, it will hold boolean value. On true value, you will get Success Icon with optional
+ * success message and redirect button. On false value, you will get Error Icon with optional error message and redirect button. 
+ * Defaults to true.
+ * 
+ * **Input property,  btnText**, it is used to apply user friendly text to button from the end user.
+ *
+ * **NOTE:**  **Input property,  showRedirectButton**, it is set default to **false**,
+ * meaning button is invisible to user. If you apply **true**, then it will become **visible**.
+ *
+ * There is an **Output event** named sendNotificationEvent, on click
+ * of **CLICK HERE TO LOGIN** button, it will emit btnText input property value as as string. **For instance,** you have defined a button 
+ * with value as **CLICK HERE TO LOGIN**, it will emit it&#x27;s value as string to the end user on click of this button. 
+ *
+ *
+ * ### Usage
+ *  &#x60;import { AntraUiModule } from &#x27;antra-ui&#x27;;&#x60;
+ */
+
+@Component({
+  selector: &#x27;antra-notification-dialog&#x27;,
+  templateUrl: &#x27;./notification-dialog.component.html&#x27;,
+  styleUrls: [&#x27;./notification-dialog.component.scss&#x27;]
+})
+/**
+ * Example of usage:
+ * &lt;example-url&gt;https://antra-inc.github.io/Antra-ui/components/notification-dialog&lt;/example-url&gt;
+ */
+export class NotificationDialogComponent implements OnInit {
+
+  @Input() successMessage &#x3D; &#x27;Password reset successful&#x27;;
+  @Input() btnText &#x3D; &#x27;CLICK HERE TO LOGIN&#x27;;
+  @Input() showRedirectButton &#x3D; false;
+  @Input() notificationStatus &#x3D; true;
+  @Input() errorMessage &#x3D; &#x27;&#x27;;
+
+  // emitting sendNotificationEvent - SUBMIT action to end user
+  @Output() sendNotificationEvent &#x3D; new EventEmitter&lt;string&gt;();
+
+  /**
+   * @ignore
+   */
+  constructor() { }
+
+  /**
+   * @ignore
+   */
+  ngOnInit(): void { }
+
+  // tslint:disable-next-line: typedef
+  onSubmit() {
+    this.sendNotificationEvent.emit(this.btnText);
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div antraWidget class&#x3D;&quot;form-container notification-dialog&quot;&gt;
+
+    &lt;!-- ON SUCCESS --&gt;
+    &lt;div *ngIf&#x3D;&quot;notificationStatus&quot;&gt;
+        &lt;div class&#x3D;&quot;form__row text-center notification-dialog__success-icon&quot;&gt;
+            &lt;span class&#x3D;&quot;material-icons&quot;&gt; check_circle &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;form__row&quot;&gt;
+            &lt;p&gt;{{ successMessage }}.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- ON ERROR --&gt;
+    &lt;div *ngIf&#x3D;&quot;notificationStatus&#x3D;&#x3D;false&quot;&gt;
+        &lt;div class&#x3D;&quot;form__row text-center notification-dialog__error-icon&quot;&gt;
+            &lt;span class&#x3D;&quot;material-icons&quot;&gt; error &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;form__row&quot;&gt;
+            &lt;p&gt;{{ errorMessage }}.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;form__row justity-content notification-dialog__btn&quot; *ngIf&#x3D;&quot;showRedirectButton&quot;&gt;
+        &lt;button mat-button (click)&#x3D;&quot;onSubmit()&quot; class&#x3D;&quot;btn btn-primary form__submit-center&quot;&gt;{{ btnText }}&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./notification-dialog.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.form__row p {
+    text-align: center;
+    font-size: 15px;
+    width: 100%;
+}
+
+.notification-dialog {
+
+    &amp;__success-icon,
+    &amp;__error-icon {
+        justify-content: center;
+
+        .material-icons {
+            color: #50e109;
+            font-size: 50px;
+        }
+    }
+
+    &amp;__error-icon {
+        .material-icons {
+            color: red !important;
+        }
+    }
+
+    &amp;__btn {
+        button {
+            width: auto !important;
+        }
+    }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-pane fade " id="c-example">
+            <iframe class="exampleContainer" src="https://antra-inc.github.io/Antra-ui/components/notification-dialog">
+                <p>no-iframes</p>
+            </iframe>
+    </div>
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div antraWidget class="form-container notification-dialog">    <!-- ON SUCCESS -->    <div *ngIf="notificationStatus">        <div class="form__row text-center notification-dialog__success-icon">            <span class="material-icons"> check_circle </span>        </div>        <div class="form__row">            <p>{{ successMessage }}.</p>        </div>    </div>    <!-- ON ERROR -->    <div *ngIf="notificationStatus==false">        <div class="form__row text-center notification-dialog__error-icon">            <span class="material-icons"> error </span>        </div>        <div class="form__row">            <p>{{ errorMessage }}.</p>        </div>    </div>    <div class="form__row justity-content notification-dialog__btn" *ngIf="showRedirectButton">        <button mat-button (click)="onSubmit()" class="btn btn-primary form__submit-center">{{ btnText }}</button>    </div></div></div>'
+    var COMPONENTS = [{'name': 'ButtonComponent', 'selector': 'antra-button'},{'name': 'ChangePasswordComponent', 'selector': 'antra-change-password'},{'name': 'LoginComponent', 'selector': 'antra-login'},{'name': 'LogoComponent', 'selector': 'antra-logo'},{'name': 'NotificationDialogComponent', 'selector': 'antra-notification-dialog'},{'name': 'PasswordResetComponent', 'selector': 'antra-password-reset'},{'name': 'ProgressSpinnerComponent', 'selector': 'antra-progress-spinner'},{'name': 'RaisedButtonComponent', 'selector': 'antra-raised-button'},{'name': 'SidenavbarComponent', 'selector': 'antra-sidenavbar'}];
+    var DIRECTIVES = [{'name': 'AntraWidgetDirective', 'selector': '[antraWidget]'},{'name': 'EmailPatternDirective', 'selector': '[antraEmailPattern]'},{'name': 'MatchPasswordDirective', 'selector': '[antraMatchPassword]'},{'name': 'PasswordPatternDirective', 'selector': '[antraPasswordPattern]'}];
+    var ACTUAL_COMPONENT = {'name': 'NotificationDialogComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'NotificationDialogComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
