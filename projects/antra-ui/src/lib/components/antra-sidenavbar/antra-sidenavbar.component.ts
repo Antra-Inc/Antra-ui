@@ -14,6 +14,28 @@ import { NavLinkNode, NavLinkNodeFlat } from '../../interfaces/sidenavbar.interf
  *
  * Thanks to Antra-UI you can easily implement SideNav in your own projects, by using one of various, alluring Side Menus.
  *
+ *  * There are several input properties used in this component. Below given are the names of the input properties.
+ *  **Input properties sideNavTextColor and sideNavSubMenuTextColor are used to set custom text colors for 
+ * Main Menu Items and Sub Menu Items.** Default values are sideNavTextColor = 'red' and sideNavSubMenuTextColor = 'black'.
+ * 
+ * **Input properties sideNavBackgroundColor and sideNavSubMenuBackgroundColor are used to set custom background colors for 
+ * Main Menu Items and Sub Menu Items.** Default values are sideNavBackgroundColor = 'white' and sideNavSubMenuBackgroundColor = 'white'.
+ * 
+ * **Input properties sideNavFontSize and sideNavSubMenuFontSize are used to set custom font sizes for 
+ * Main Menu Items and Sub Menu Items.** Default values are sideNavFontSize = '16' and sideNavSubMenuFontSize = '13'.
+ * 
+ * **Input property, sidenavMode takes either of these 3 values 'over' | 'push' | 'side'.** It is used to set side navigation mode.
+ * Default value is 'side'
+ * 
+ * **Input property, treeNodePaddingIndent takes default value as '0px'.** It is used to set default padding indent for side nav bar.
+ * 
+ * **Input property, isOpen takes default value as 'true'.** It is used to check sidenav bar expanded or closed.
+ * 
+ * **Input property, sideNavConfig takes default value as empty node tree.** It is used set dynamic tree nodes to the side nav bar.
+ * 
+ * **Output property, listOptionClicked, it is used to hold and emit the selected node info.**
+ * 
+ * 
  * ### Usage
  *  `import { AntraUiModule } from 'antra-ui';`
  *
@@ -35,13 +57,22 @@ export class SidenavbarComponent implements OnInit, OnChanges {
   isExpanded = false;
 
   /**
-   * Customrize the Sidenav text color;
+   * Customize the Sidenav and SideNavSubMenu text color;
    */
   @Input() sideNavTextColor = 'red';
+  @Input() sideNavSubMenuTextColor = 'black';
   /**
-   * Customrize the Sidenav background;
+   * Customize the Sidenav and SideNavSubMenu background;
    */
-  @Input() sideNavBackground = '';
+  @Input() sideNavBackgroundColor = 'white';
+  @Input() sideNavSubMenuBackgroundColor = 'white';
+
+  /**
+   * Customize the Sidenav and SideNavSubMenu fontsize;
+   */
+  @Input() sideNavFontSize = '16';
+  @Input() sideNavSubMenuFontSize = '13';
+
   /**
    * Set mode of the Sidenav, the default mode is side;
    */
@@ -56,7 +87,7 @@ export class SidenavbarComponent implements OnInit, OnChanges {
   @Input() isOpen = true;
 
   /**
-   * Customrize tree nodes, enables to implement more advanced content categorization;
+   * Customize tree nodes, enables to implement more advanced content categorization;
    */
   @Input() sideNavConfig: NavLinkNode[] = [];
 
@@ -71,7 +102,7 @@ export class SidenavbarComponent implements OnInit, OnChanges {
   // tslint:disable-next-line: variable-name
   private _transformer = (node: NavLinkNode, level: number) => {
     return {
-      expandable: !!node.children && node.children.length > 0,
+      expandable: !!node.children && node.children.length >= 0,
       name: node.name,
       url: node.url,
       icon: node.icon,
