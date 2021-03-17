@@ -5,19 +5,11 @@
     <mat-nav-list>
       <!-- || !node.children -->
       <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" [ngStyle]="{ background: sideNavBackground }">
-        <mat-tree-node [ngStyle]="{ display: isExpanded ? 'block' : 'none' }" *matTreeNodeDef="let node"
-          matTreeNodePadding [matTreeNodePaddingIndent]="treeNodePaddingIndent">
-          <mat-list-item (click)="handleListOnClick(node)"
-            [ngStyle]="{ color: sideNavSubMenuTextColor, 'background-color': sideNavSubMenuBackground }">
-            <mat-icon mat-list-icon *ngIf="!node.useSvgIcon">{{ node.icon }}</mat-icon>
-            <mat-icon mat-list-icon *ngIf="node.useSvgIcon" [svgIcon]="node.icon"></mat-icon>
-            <span mat-line [ngStyle]="{'font-size.px':sideNavSubMenuFontSize}">{{ node.name }}</span>
-          </mat-list-item>
-        </mat-tree-node>
-
+        <!-- Menus -->
         <mat-tree-node *matTreeNodeDef="let node; when: hasChild">
           <mat-list-item (click)="handleTreeNodeToggle(node); handleListOnClick(node)"
-            [attr.aria-label]="'Toggle ' + node.name" [ngStyle]="{ color: sideNavTextColor }">
+            [attr.aria-label]="'Toggle ' + node.name"
+            [ngStyle]="{ color: sideNavTextColor, 'background-color': sideNavBackgroundColor }">
             <mat-icon mat-list-icon *ngIf="!node.useSvgIcon">{{ node.icon }}</mat-icon>
             <mat-icon mat-list-icon *ngIf="node.useSvgIcon" [svgIcon]="node.icon"></mat-icon>
             <mat-icon *ngIf="isExpanded">
@@ -26,6 +18,19 @@
               {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
             </mat-icon>
             <span mat-line [ngStyle]="{'font-size.px':sideNavFontSize}" *ngIf="isExpanded">{{ node.name }}</span>
+          </mat-list-item>
+        </mat-tree-node>
+
+        <!-- SubMenus -->
+        <mat-tree-node [ngStyle]="{ display: isExpanded || node.icon ? 'block' : 'none' }" *matTreeNodeDef="let node"
+          matTreeNodePadding [matTreeNodePaddingIndent]="treeNodePaddingIndent">
+          <mat-list-item (click)="handleListOnClick(node)"
+            [ngStyle]="node.icon?{ color: sideNavTextColor, 'background-color': sideNavBackgroundColor }:{ color: sideNavSubMenuTextColor, 'background-color': sideNavSubMenuBackgroundColor}">
+            <mat-icon mat-list-icon *ngIf="!node.useSvgIcon">{{ node.icon }}</mat-icon>
+            <mat-icon mat-list-icon *ngIf="node.useSvgIcon" [svgIcon]="node.icon"></mat-icon>
+            <span mat-line
+              [ngStyle]="node.icon? {'font-size.px':sideNavFontSize}:{'font-size.px':sideNavSubMenuFontSize}">
+              {{ node.name }}</span>
           </mat-list-item>
         </mat-tree-node>
       </mat-tree>
