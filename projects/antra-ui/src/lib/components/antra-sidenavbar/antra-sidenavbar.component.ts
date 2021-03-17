@@ -35,13 +35,22 @@ export class SidenavbarComponent implements OnInit, OnChanges {
   isExpanded = false;
 
   /**
-   * Customrize the Sidenav text color;
+   * Customize the Sidenav and SideNavSubMenu text color;
    */
   @Input() sideNavTextColor = 'red';
+  @Input() sideNavSubMenuTextColor = 'black';
   /**
-   * Customrize the Sidenav background;
+   * Customize the Sidenav and SideNavSubMenu background;
    */
   @Input() sideNavBackground = '';
+  @Input() sideNavSubMenuBackground = 'white';
+
+  /**
+   * Customize the Sidenav and SideNavSubMenu fontsize;
+   */
+  @Input() sideNavFontSize = '16';
+  @Input() sideNavSubMenuFontSize = '13';
+
   /**
    * Set mode of the Sidenav, the default mode is side;
    */

@@ -3,13 +3,15 @@
     [ngStyle]="{ background: sideNavBackground }" [ngClass]="{ sidenavopen: isExpanded }"
     (mouseenter)="handleMouseEnter()" (mouseleave)="handleMouseLeave()" color="primary">
     <mat-nav-list>
+      <!-- || !node.children -->
       <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" [ngStyle]="{ background: sideNavBackground }">
-        <mat-tree-node [ngStyle]="{ display: isExpanded || !node.children? 'block' : 'none' }"
-          *matTreeNodeDef="let node" matTreeNodePadding [matTreeNodePaddingIndent]="treeNodePaddingIndent">
-          <mat-list-item (click)="handleListOnClick(node)" [ngStyle]="{ color: sideNavTextColor }">
+        <mat-tree-node [ngStyle]="{ display: isExpanded ? 'block' : 'none' }" *matTreeNodeDef="let node"
+          matTreeNodePadding [matTreeNodePaddingIndent]="treeNodePaddingIndent">
+          <mat-list-item (click)="handleListOnClick(node)"
+            [ngStyle]="{ color: sideNavSubMenuTextColor, 'background-color': sideNavSubMenuBackground }">
             <mat-icon mat-list-icon *ngIf="!node.useSvgIcon">{{ node.icon }}</mat-icon>
             <mat-icon mat-list-icon *ngIf="node.useSvgIcon" [svgIcon]="node.icon"></mat-icon>
-            <span mat-line>{{ node.name }}</span>
+            <span mat-line [ngStyle]="{'font-size.px':sideNavSubMenuFontSize}">{{ node.name }}</span>
           </mat-list-item>
         </mat-tree-node>
 
@@ -19,10 +21,11 @@
             <mat-icon mat-list-icon *ngIf="!node.useSvgIcon">{{ node.icon }}</mat-icon>
             <mat-icon mat-list-icon *ngIf="node.useSvgIcon" [svgIcon]="node.icon"></mat-icon>
             <mat-icon *ngIf="isExpanded">
-              {{ treeControl.isExpanded(node)===null?'':treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'
-              }}
+              <!-- {{ treeControl.isExpanded(node)===null?'':treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'
+              }} -->
+              {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
             </mat-icon>
-            <span mat-line *ngIf="isExpanded">{{ node.name }}</span>
+            <span mat-line [ngStyle]="{'font-size.px':sideNavFontSize}" *ngIf="isExpanded">{{ node.name }}</span>
           </mat-list-item>
         </mat-tree-node>
       </mat-tree>
