@@ -33,7 +33,7 @@ import { NavLinkNode, NavLinkNodeFlat } from '../../interfaces/sidenavbar.interf
  * 
  * **Input property, sideNavConfig takes default value as empty node tree.** It is used set dynamic tree nodes to the side nav bar.
  * 
- * **Output property, listOptionClicked, it is used to hold and emit the selected node info. **
+ * **Output property, listOptionClicked, it is used to hold and emit the selected node info.**
  * 
  * 
  * ### Usage
