@@ -17,12 +17,12 @@ import { NavLinkNode, NavLinkNodeFlat } from '../../interfaces/sidenavbar.interf
  *  * There are several input properties used in this component. Below given are the names of the input properties.
  *  **Input properties sideNavTextColor and sideNavSubMenuTextColor are used to set custom text colors for 
  * Main Menu Items and Sub Menu Items.** Default values are sideNavTextColor = 'red' and sideNavSubMenuTextColor = 'black'.
- * 
- * **Input properties sideNavBackgroundColor and sideNavSubMenuBackgroundColor are used to set custom background colors for 
- * Main Menu Items and Sub Menu Items.** Default values are sideNavBackgroundColor = 'white' and sideNavSubMenuBackgroundColor = 'white'.
- * 
+ *
  * **Input properties sideNavFontSize and sideNavSubMenuFontSize are used to set custom font sizes for 
- * Main Menu Items and Sub Menu Items.** Default values are sideNavFontSize = '16' and sideNavSubMenuFontSize = '13'.
+ * Main Menu Items and Sub Menu Items.** Default values are sideNavFontSize = '16' and sideNavSubMenuFontSize = '13'. 
+ * 
+ * **Input property sideNavBackgroundHighlight is used to set custom highlighted color when any of the 
+ * Main Menu Item or Sub Menu Item selected.** There is no default color.
  * 
  * **Input property, sidenavMode takes either of these 3 values 'over' | 'push' | 'side'.** It is used to set side navigation mode.
  * Default value is 'side'
@@ -67,10 +67,9 @@ export class SidenavbarComponent implements OnInit, OnChanges {
   @Input() sideNavTextColor = 'black';
   @Input() sideNavSubMenuTextColor = 'black';
   /**
-   * Customize the Sidenav and SideNavSubMenu background;
+   * Customize the Sidenav background;
    */
   @Input() sideNavBackgroundColor = '';
-  @Input() sideNavSubMenuBackgroundColor = '';
 
   /**
    * Customize the Sidenav and SideNavSubMenu fontsize;
