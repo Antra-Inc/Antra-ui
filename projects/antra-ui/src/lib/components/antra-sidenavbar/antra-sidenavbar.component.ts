@@ -57,15 +57,20 @@ export class SidenavbarComponent implements OnInit, OnChanges {
   isExpanded = false;
 
   /**
+   * Customize the sideNavBackgroundHighlight color;
+   */
+  activeNode;
+  @Input() sideNavBackgroundHighlightColor = '';
+  /**
    * Customize the Sidenav and SideNavSubMenu text color;
    */
-  @Input() sideNavTextColor = 'red';
+  @Input() sideNavTextColor = 'black';
   @Input() sideNavSubMenuTextColor = 'black';
   /**
    * Customize the Sidenav and SideNavSubMenu background;
    */
-  @Input() sideNavBackgroundColor = 'white';
-  @Input() sideNavSubMenuBackgroundColor = 'white';
+  @Input() sideNavBackgroundColor = '';
+  @Input() sideNavSubMenuBackgroundColor = '';
 
   /**
    * Customize the Sidenav and SideNavSubMenu fontsize;

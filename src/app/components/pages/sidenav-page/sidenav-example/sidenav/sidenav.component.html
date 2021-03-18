@@ -1,6 +1,6 @@
 <antra-sidenavbar class="drawer-container" sideNavBackgroundColor="rgb(22, 49, 96)" sideNavSubMenuBackgroundColor="grey"
   sideNavTextColor="white" sideNavSubMenuTextColor="white" [isOpen]="isOpen" [sideNavConfig]="sideNavConfig"
-  (listOptionClicked)="getClickEventFromSideNav($event)">
+  sideNavBackgroundHighlightColor="brown" (listOptionClicked)="getClickEventFromSideNav($event)">
   <button type="button" mat-raised-button (click)="toggleSideNav()">Toggle sidenav</button>
   <h1 *ngIf="optionInSideNav !== ''">{{ optionInSideNav }} be clicked.</h1>
   <h1 *ngIf="optionInSideNav === ''">Select an optione.</h1>
