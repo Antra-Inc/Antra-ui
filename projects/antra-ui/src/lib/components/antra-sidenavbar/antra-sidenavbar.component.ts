@@ -22,7 +22,7 @@ import { NavLinkNode, NavLinkNodeFlat } from '../../interfaces/sidenavbar.interf
  * Main Menu Items and Sub Menu Items.** Default values are sideNavFontSize = '16' and sideNavSubMenuFontSize = '13'. 
  * 
  * **Input property sideNavBackgroundHighlight is used to set custom highlighted color when any of the 
- * Main Menu Item or Sub Menu Item selected.** There is no default color.
+ * Main Menu Item or Sub Menu Item selected.** Default value is 'grey'.
  * 
  * **Input property, sidenavMode takes either of these 3 values 'over' | 'push' | 'side'.** It is used to set side navigation mode.
  * Default value is 'side'
@@ -60,7 +60,9 @@ export class SidenavbarComponent implements OnInit, OnChanges {
    * Customize the sideNavBackgroundHighlight color;
    */
   activeNode;
-  @Input() sideNavBackgroundHighlightColor = '';
+  isParentFound = false;
+  parentNode;
+  @Input() sideNavBackgroundHighlightColor = 'grey';
   /**
    * Customize the Sidenav and SideNavSubMenu text color;
    */
@@ -170,6 +172,10 @@ export class SidenavbarComponent implements OnInit, OnChanges {
    */
   handleMouseLeave(): void {
     this.isExpanded = false;
+
+    if (this.treeControl.isExpanded(this.parentNode)) {
+      console.log(this.treeControl.isExpanded(this.parentNode));
+    }
   }
   /**
    * Handle mouse enter
@@ -183,5 +189,25 @@ export class SidenavbarComponent implements OnInit, OnChanges {
    */
   handleTreeNodeToggle(node: NavLinkNodeFlat): void {
     this.treeControl.toggle(node);
+  }
+
+  /**
+   * Finding parent node based on childnode
+   * @param childActiveNode node
+   */
+  setParentNode(childActiveNode): void {
+    for (const node of this.dataSource.data) {
+      if (node.children) {
+        for (const child of node.children) {
+          if (child.name === childActiveNode.name) {
+            this.isParentFound = true;
+            this.parentNode = node;
+            break;
+          }
+        }
+      }
+    }
+    console.log(this.isParentFound);
+    console.log(this.parentNode);
   }
 }
