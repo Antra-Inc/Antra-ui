@@ -5,7 +5,8 @@
     <mat-nav-list>
       <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" [ngStyle]="{ background: sideNavBackgroundColor}">
         <!-- Menus -->
-        <mat-tree-node *matTreeNodeDef="let node; when: hasChild;" (click)="activeNode = node; childActiveNode=null;print(node)"
+        <mat-tree-node *matTreeNodeDef="let node; when: hasChild;"
+          (click)="activeNode = node; parentNode = null; childActiveNode=null;print(node)"
           [ngStyle]="activeNode === node || parentNode?.name === node?.name ? {'background-color': sideNavBackgroundHighlightColor}: {'background-color':'transparent'}">
           <mat-list-item (click)="handleTreeNodeToggle(node); handleListOnClick(node)" class="sideNavMenuBgColor"
             [attr.aria-label]="'Toggle ' + node.name" [ngStyle]="{ color: sideNavTextColor }">

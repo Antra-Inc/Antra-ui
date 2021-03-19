@@ -197,13 +197,13 @@ export class SidenavbarComponent implements OnInit, OnChanges {
       if (node.children) {
         node.children.map(childNode => {
           if (childNode.name === childActiveNode.name) {
-            this.parentNode = this.activeNode = node;
+            this.parentNode = node;
             this.isParentFound = true;
           }
         });
       }
       else {
-        this.parentNode = this.activeNode = null;
+        this.parentNode = null;
         this.isParentFound = false;
       }
     });
