@@ -10,8 +10,8 @@
     height: 60px;
     z-index: 1000;
   }
-  
-  .app-drawer-container::ng-deep > .mat-drawer-container {
+
+  .app-drawer-container::ng-deep>.mat-drawer-container {
     position: fixed;
     top: 60px;
     left: 0;
@@ -22,3 +22,6 @@
 }
 
 
+// ::ng-deep .sideNavSubMenuBgColor {
+//   background-color: lightgrey;
+// }

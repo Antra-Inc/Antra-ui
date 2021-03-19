@@ -10,7 +10,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 @Component({
   template: `
     <antra-sidenavbar
-      [sideNavBackground]="sideNavBackground"
+      [sideNavBackgroundColor]="sideNavBackground"
       [sideNavTextColor]="sideNavTextColor"
       [isOpen]="isOpen"
       [sideNavConfig]="sideNavConfig"
@@ -22,8 +22,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
   `,
 })
 class TestHostComponent {
-  sideNavBackground = 'green';
-  sideNavTextColor = '#7fff00';
+  sideNavBackground = 'blue';
+  sideNavTextColor = 'black';
   optionInSideNav = '';
   isOpen = true;
 
@@ -83,17 +83,17 @@ describe('SidenavbarComponent', () => {
 
   it('should render the correct Text Color for the sideNav after customize the sideNavTextColor attribute.', () => {
     const sidnav = fixture.debugElement.query(By.directive(SidenavbarComponent));
-    sidnav.componentInstance.sideNavTextColor = 'blue';
+    sidnav.componentInstance.sideNavTextColor = 'black';
     fixture.detectChanges();
 
     const listItems = fixture.debugElement.queryAll(By.css('mat-list-item'));
 
     for (const item of listItems) {
-      expect(item.nativeElement.style.color).toBe('blue');
+      expect(item.nativeElement.style.color).toBe('black');
     }
   });
 
-  it('should render the correct background for the sideNav after customize the sideNavBackground attribute.', () => {
+  it('should render the correct background for the sideNav after customize the sideNavBackgroundColor attribute.', () => {
     const sidnav = fixture.debugElement.query(By.directive(SidenavbarComponent));
     sidnav.componentInstance.sideNavBackground = 'blue';
     fixture.detectChanges();

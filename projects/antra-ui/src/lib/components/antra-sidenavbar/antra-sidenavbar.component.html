@@ -1,14 +1,14 @@
 <mat-drawer-container autosize>
   <mat-drawer #drawer [mode]="sidenavMode" [opened]="isOpen" class="sidenavbar-sidenav"
-    [ngStyle]="{ background: sideNavBackground }" [ngClass]="{ sidenavopen: isExpanded }"
+    [ngStyle]="{ background: sideNavBackgroundColor }" [ngClass]="{ sidenavopen: isExpanded }"
     (mouseenter)="handleMouseEnter()" (mouseleave)="handleMouseLeave()" color="primary">
     <mat-nav-list>
-      <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" [ngStyle]="{ background: sideNavBackground }">
+      <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" [ngStyle]="{ background: sideNavBackgroundColor}">
         <!-- Menus -->
-        <mat-tree-node *matTreeNodeDef="let node; when: hasChild">
-          <mat-list-item (click)="handleTreeNodeToggle(node); handleListOnClick(node)"
-            [attr.aria-label]="'Toggle ' + node.name"
-            [ngStyle]="{ color: sideNavTextColor, 'background-color': sideNavBackgroundColor }">
+        <mat-tree-node *matTreeNodeDef="let node; when: hasChild;" (click)="activeNode = node; parentNode = null;"
+          [ngStyle]="activeNode === node || parentNode?.name === node?.name ? {'background-color': sideNavBackgroundHighlightColor}: {'background-color':'transparent'}">
+          <mat-list-item (click)="handleTreeNodeToggle(node); handleListOnClick(node)" class="sideNavMenuBgColor"
+            [attr.aria-label]="'Toggle ' + node.name" [ngStyle]="{ color: sideNavTextColor }">
             <mat-icon mat-list-icon *ngIf="!node.useSvgIcon">{{ node.icon }}</mat-icon>
             <mat-icon mat-list-icon *ngIf="node.useSvgIcon" [svgIcon]="node.icon"></mat-icon>
             <mat-icon *ngIf="isExpanded">
@@ -19,10 +19,11 @@
         </mat-tree-node>
 
         <!-- SubMenus -->
-        <mat-tree-node [ngStyle]="{ display: isExpanded || node.icon ? 'block' : 'none' }" *matTreeNodeDef="let node"
+        <mat-tree-node *matTreeNodeDef="let node" (click)="activeNode = node; setParentNode(node);"
+          [ngStyle]="{ display: isExpanded || node.icon ? 'block' : 'none', 'background-color': activeNode === node ? sideNavBackgroundHighlightColor :'transparent' }"
           matTreeNodePadding [matTreeNodePaddingIndent]="treeNodePaddingIndent">
-          <mat-list-item (click)="handleListOnClick(node)" [ngStyle]="node.icon ? { color: sideNavTextColor, 'background-color': sideNavBackgroundColor }
-            :{ color: sideNavSubMenuTextColor, 'background-color': sideNavSubMenuBackgroundColor}">
+          <mat-list-item (click)="handleListOnClick(node)" class="sideNavSubMenuBgColor"
+            [ngStyle]="node.icon ? { color: sideNavTextColor } :{ color: sideNavSubMenuTextColor}">
             <mat-icon mat-list-icon *ngIf="!node.useSvgIcon">{{ node.icon }}</mat-icon>
             <mat-icon mat-list-icon *ngIf="node.useSvgIcon" [svgIcon]="node.icon"></mat-icon>
             <span mat-line
