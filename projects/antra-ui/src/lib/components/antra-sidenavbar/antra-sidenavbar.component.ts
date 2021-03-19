@@ -61,7 +61,6 @@ export class SidenavbarComponent implements OnInit, OnChanges {
    */
   activeNode;
   childActiveNode;
-  isParentFound = false;
   parentNode!: NavLinkNode;
   @Input() sideNavBackgroundHighlightColor = 'grey';
   /**
@@ -198,20 +197,12 @@ export class SidenavbarComponent implements OnInit, OnChanges {
         node.children.map(childNode => {
           if (childNode.name === childActiveNode.name) {
             this.parentNode = node;
-            this.isParentFound = true;
           }
         });
       }
       else {
         this.parentNode = null;
-        this.isParentFound = false;
       }
     });
-    console.log('this.isParentFound ', this.isParentFound);
-    console.log('this.parentNode ', this.parentNode);
-    console.log('this.activeNode ', this.activeNode);
-  }
-  print(node) {
-    console.log(node)
   }
 }
