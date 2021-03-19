@@ -60,8 +60,9 @@ export class SidenavbarComponent implements OnInit, OnChanges {
    * Customize the sideNavBackgroundHighlight color;
    */
   activeNode;
+  childActiveNode;
   isParentFound = false;
-  parentNode;
+  parentNode!: NavLinkNode;
   @Input() sideNavBackgroundHighlightColor = 'grey';
   /**
    * Customize the Sidenav and SideNavSubMenu text color;
@@ -172,10 +173,6 @@ export class SidenavbarComponent implements OnInit, OnChanges {
    */
   handleMouseLeave(): void {
     this.isExpanded = false;
-
-    if (this.treeControl.isExpanded(this.parentNode)) {
-      console.log(this.treeControl.isExpanded(this.parentNode));
-    }
   }
   /**
    * Handle mouse enter
@@ -196,18 +193,25 @@ export class SidenavbarComponent implements OnInit, OnChanges {
    * @param childActiveNode node
    */
   setParentNode(childActiveNode): void {
-    for (const node of this.dataSource.data) {
+    this.sideNavConfig.map(node => {
       if (node.children) {
-        for (const child of node.children) {
-          if (child.name === childActiveNode.name) {
+        node.children.map(childNode => {
+          if (childNode.name === childActiveNode.name) {
+            this.parentNode = this.activeNode = node;
             this.isParentFound = true;
-            this.parentNode = node;
-            break;
           }
-        }
+        });
       }
-    }
-    console.log(this.isParentFound);
-    console.log(this.parentNode);
+      else {
+        this.parentNode = this.activeNode = null;
+        this.isParentFound = false;
+      }
+    });
+    console.log('this.isParentFound ', this.isParentFound);
+    console.log('this.parentNode ', this.parentNode);
+    console.log('this.activeNode ', this.activeNode);
+  }
+  print(node) {
+    console.log(node)
   }
 }

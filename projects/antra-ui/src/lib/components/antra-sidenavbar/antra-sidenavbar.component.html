@@ -5,8 +5,8 @@
     <mat-nav-list>
       <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" [ngStyle]="{ background: sideNavBackgroundColor}">
         <!-- Menus -->
-        <mat-tree-node *matTreeNodeDef="let node; when: hasChild" (click)="activeNode = node;"
-          [ngStyle]="activeNode === node ? {'background-color': sideNavBackgroundHighlightColor}: {'background-color':'transparent'}">
+        <mat-tree-node *matTreeNodeDef="let node; when: hasChild;" (click)="activeNode = node; childActiveNode=null;print(node)"
+          [ngStyle]="activeNode === node || parentNode?.name === node?.name ? {'background-color': sideNavBackgroundHighlightColor}: {'background-color':'transparent'}">
           <mat-list-item (click)="handleTreeNodeToggle(node); handleListOnClick(node)" class="sideNavMenuBgColor"
             [attr.aria-label]="'Toggle ' + node.name" [ngStyle]="{ color: sideNavTextColor }">
             <mat-icon mat-list-icon *ngIf="!node.useSvgIcon">{{ node.icon }}</mat-icon>
@@ -20,8 +20,8 @@
 
         <!-- SubMenus -->
         <mat-tree-node *matTreeNodeDef="let node"
-          (click)="activeNode = node; setParentNode(node);"
-          [ngStyle]="{ display: isExpanded || node.icon ? 'block' : 'none', 'background-color': activeNode === node ? sideNavBackgroundHighlightColor :'transparent' }"
+          (click)="childActiveNode = node; activeNode=null; setParentNode(node);"
+          [ngStyle]="{ display: isExpanded || node.icon ? 'block' : 'none', 'background-color': childActiveNode === node ? sideNavBackgroundHighlightColor :'transparent' }"
           matTreeNodePadding [matTreeNodePaddingIndent]="treeNodePaddingIndent">
           <mat-list-item (click)="handleListOnClick(node)" class="sideNavSubMenuBgColor"
             [ngStyle]="node.icon ? { color: sideNavTextColor } :{ color: sideNavSubMenuTextColor}">
