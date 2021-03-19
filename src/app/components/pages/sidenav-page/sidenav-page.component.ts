@@ -10,7 +10,7 @@ import { NavLinkNodeFlat, NavLinkNode } from 'src/app/interface/app.interface';
 export class SidenavPageComponent {
   htmlSource = `<antra-sidenavbar class="drawer-container" sideNavBackgroundColor="rgb(22, 49, 96)" sideNavSubMenuBackgroundColor="grey"
   sideNavTextColor="white" sideNavSubMenuTextColor="white" [isOpen]="isOpen" [sideNavConfig]="sideNavConfig"
-  (listOptionClicked)="getClickEventFromSideNav($event)">
+  sideNavBackgroundHighlightColor="grey" (listOptionClicked)="getClickEventFromSideNav($event)">
   <button type="button" mat-raised-button (click)="toggleSideNav()">Toggle sidenav</button>
   <h1 *ngIf="optionInSideNav !== ''">{{ optionInSideNav }} be clicked.</h1>
   <h1 *ngIf="optionInSideNav === ''">Select an optione.</h1>
@@ -26,18 +26,18 @@ export class SidenavPageComponent {
   }  
   `;
 
-  tsSource = `  import { Component } from '@angular/core';
+  tsSource = ` import { Component } from '@angular/core';
   import { NavLinkNode, NavLinkNodeFlat } from 'antra-ui';
   import { DomSanitizer } from '@angular/platform-browser';
   import { MatIconRegistry } from '@angular/material/icon';
-
+  
   @Component({
     selector: 'app-sidenav-example',
     templateUrl: './sidenav.component.html',
     styleUrls: ['./sidenav.component.scss']
   })
   export class SidenavComponent {
-
+  
     optionInSideNav = '';
     isOpen = true;
     sideNavConfig: NavLinkNode[] = [
@@ -52,7 +52,7 @@ export class SidenavPageComponent {
         useSvgIcon: true,
         children: [
           { name: 'example-option1', url: 'components/example-option1' },
-          { name: 'example-option2', url: 'components/example-option2'},
+          { name: 'example-option2', url: 'components/example-option2' },
         ],
       },
       {
@@ -63,21 +63,21 @@ export class SidenavPageComponent {
         ],
       },
     ];
-
+  
     constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
       const imgDir = 'assets/svg';
       iconRegistry.addSvgIcon(
         'myinfo',
-        sanitizer.bypassSecurityTrustResourceUrl(imgDir + '/icn_myinfo.svg')
+        sanitizer.bypassSecurityTrustResourceUrl(imgDir+'/icn_myinfo.svg')
       );
     }
-
+  
     getClickEventFromSideNav(event: NavLinkNodeFlat): void {
-
+  
       this.optionInSideNav = event.name;
       // this.router.navigate([event.url]);
     }
-
+  
     toggleSideNav(): void {
       this.isOpen = !this.isOpen;
     }
