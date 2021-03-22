@@ -13,12 +13,7 @@ export class SidenavComponent {
   optionInSideNav = '';
   isOpen = true;
   sideNavConfig: NavLinkNode[] = [
-    // for testing 0 child
-    {
-      name: 'Clock',
-      icon: 'alarm',
-    },
-    // for testing 0 child
+    // testing with empty children array
     {
       name: 'Renew',
       icon: 'autorenew',
@@ -40,6 +35,11 @@ export class SidenavComponent {
         { name: 'example-option3', url: 'components/example-option3' },
       ],
     },
+    // testing with removing children property
+    {
+      name: 'Clock',
+      icon: 'alarm',
+    },
   ];
 
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
@@ -51,7 +51,6 @@ export class SidenavComponent {
   }
 
   getClickEventFromSideNav(event: NavLinkNodeFlat): void {
-
     this.optionInSideNav = event.name;
     // this.router.navigate([event.url]);
   }
