@@ -8,7 +8,7 @@ import { NavLinkNodeFlat, NavLinkNode } from 'src/app/interface/app.interface';
   styleUrls: ['./sidenav-page.component.scss']
 })
 export class SidenavPageComponent {
-  htmlSource = `<antra-sidenavbar class="drawer-container" sideNavBackgroundColor="rgb(22, 49, 96)" sideNavSubMenuBackgroundColor="grey"
+  htmlSource = `<antra-sidenavbar class="drawer-container" sideNavBackgroundColor="rgb(22, 49, 96)" 
   sideNavTextColor="white" sideNavSubMenuTextColor="white" [isOpen]="isOpen" [sideNavConfig]="sideNavConfig"
   sideNavBackgroundHighlightColor="grey" (listOptionClicked)="getClickEventFromSideNav($event)">
   <button type="button" mat-raised-button (click)="toggleSideNav()">Toggle sidenav</button>

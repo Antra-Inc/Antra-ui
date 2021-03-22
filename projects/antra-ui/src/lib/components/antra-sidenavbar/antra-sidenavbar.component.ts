@@ -107,7 +107,7 @@ export class SidenavbarComponent implements OnInit, OnChanges {
   // tslint:disable-next-line: variable-name
   private _transformer = (node: NavLinkNode, level: number) => {
     return {
-      expandable: !!node.children && node.children.length >= 0,
+      expandable: !!node.children && node.children.length > 0,
       name: node.name,
       url: node.url,
       icon: node.icon,
@@ -191,16 +191,16 @@ export class SidenavbarComponent implements OnInit, OnChanges {
    * @param childActiveNode node
    */
   setParentNode(childActiveNode): void {
+    this.parentNode = null;
+
     this.sideNavConfig.map(node => {
-      if (node.children) {
+      if (node.children?.length > 0) {
         node.children.map(childNode => {
           if (childNode.name === childActiveNode.name) {
             this.parentNode = node;
+            return;
           }
         });
-      }
-      else {
-        this.parentNode = null;
       }
     });
   }
