@@ -18,6 +18,12 @@ export class SidenavComponent {
       name: 'Clock',
       icon: 'alarm',
     },
+    // for testing 0 child
+    {
+      name: 'Renew',
+      icon: 'autorenew',
+      children: []
+    },
     {
       name: 'example-sidenav tree1',
       icon: 'myinfo',

@@ -107,7 +107,7 @@ export class SidenavbarComponent implements OnInit, OnChanges {
   // tslint:disable-next-line: variable-name
   private _transformer = (node: NavLinkNode, level: number) => {
     return {
-      expandable: !!node.children && node.children.length >= 0,
+      expandable: !!node.children && node.children.length > 0,
       name: node.name,
       url: node.url,
       icon: node.icon,
